@@ -4,9 +4,6 @@ Personal portfolio website showcasing my projects, skills, and experience as a s
 
 My personal developer portfolio website.
 
-## 🔗 Live Demo
-[View Portfolio](your-link-here)
-
 ## 🛠️ Built With
 - HTML5
 - CSS3
