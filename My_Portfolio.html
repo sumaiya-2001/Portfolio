@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Fathima Sumaiya | Portfolio</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0b10;
+            font-family: 'Inter', sans-serif;
+            color: #eef2ff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* Purple & Black Theme with vibrant accents */
+        :root {
+            --bg-dark: #050508;
+            --surface: #111116;
+            --purple-primary: #a855f7;
+            --purple-glow: #c084fc;
+            --purple-deep: #7c3aed;
+            --text-light: #f1f5f9;
+            --text-muted: #a1a1b0;
+            --border-dim: rgba(168, 85, 247, 0.2);
+            --card-hover: rgba(168, 85, 247, 0.08);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-dim);
+            padding-bottom: 1.2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, var(--purple-glow));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--purple-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .hero-left {
+            flex: 1.2;
+        }
+
+        .hero-badge {
+            background: rgba(168, 85, 247, 0.15);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            color: var(--purple-glow);
+            margin-bottom: 1rem;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .hero-left h1 {
+            font-size: 3.3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-left h1 span {
+            background: linear-gradient(120deg, #ffffff, var(--purple-glow));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .rotating-text {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            color: var(--purple-glow);
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            max-width: 550px;
+            margin: 1rem 0 1.5rem 0;
+            font-size: 1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--purple-primary);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--purple-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--purple-primary);
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 500;
+            color: var(--purple-glow);
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background: rgba(168, 85, 247, 0.1);
+            border-color: var(--purple-glow);
+        }
+
+        .hero-right {
+            flex: 0.8;
+            text-align: center;
+        }
+
+        .avatar-circle {
+            width: 260px;
+            height: 260px;
+            background: linear-gradient(145deg, #1e1a2f, #0c0c14);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--purple-primary);
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+            margin: 0 auto;
+        }
+
+        .avatar-circle i {
+            font-size: 7rem;
+            color: var(--purple-glow);
+        }
+
+        /* section style */
+        section {
+            margin: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: var(--purple-primary);
+            border-radius: 3px;
+        }
+
+        /* Projects Grid - main showcase */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border-radius: 1.5rem;
+            padding: 1.8rem;
+            border: 1px solid var(--border-dim);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--purple-primary);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .project-icon {
+            font-size: 2.2rem;
+            color: var(--purple-primary);
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.8rem 0 1rem 0;
+        }
+
+        .tech-badge {
+            background: rgba(168, 85, 247, 0.2);
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--purple-glow);
+            letter-spacing: 0.3px;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--purple-glow);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            transition: 0.2s;
+            width: fit-content;
+        }
+
+        .project-link:hover {
+            gap: 12px;
+            color: white;
+        }
+
+        /* Featured Project Section */
+        .featured-section {
+            margin-top: 2rem;
+        }
+
+        .featured {
+            background: linear-gradient(145deg, #12121a, #0a0a10);
+            border-radius: 2rem;
+            padding: 2.5rem;
+            border: 1px solid var(--border-dim);
+            margin-top: 1.5rem;
+        }
+
+        .featured-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .featured-info {
+            flex: 1;
+        }
+
+        .featured-badge {
+            color: var(--purple-glow);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .featured-info h2 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1rem 0;
+        }
+
+        .tech {
+            background: #1e1e2c;
+            padding: 0.25rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+
+        /* Social Row - LinkedIn and GitHub with real links */
+        .social-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .social-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.2s;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid var(--border-dim);
+        }
+
+        .social-link i {
+            font-size: 1.5rem;
+        }
+
+        .social-link:hover {
+            color: var(--purple-primary);
+            border-color: var(--purple-primary);
+            background: rgba(168, 85, 247, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section - simplified (removed email send button and download resume) */
+        .contact-box {
+            background: var(--surface);
+            border-radius: 2rem;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid var(--border-dim);
+        }
+
+        .contact-box p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: var(--text-muted);
+        }
+
+        .contact-email {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--purple-glow);
+            word-break: break-all;
+            margin-top: 0.5rem;
+        }
+
+        .contact-email i {
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-dim);
+            margin-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 1.2rem;
+            }
+            .hero-left h1 {
+                font-size: 2.3rem;
+            }
+            .rotating-text {
+                font-size: 1.2rem;
+            }
+            .avatar-circle {
+                width: 200px;
+                height: 200px;
+            }
+            .avatar-circle i {
+                font-size: 5rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            .featured-info h2 {
+                font-size: 1.5rem;
+            }
+            .contact-email {
+                font-size: 1.1rem;
+            }
+        }
+
+        .purple-highlight {
+            color: var(--purple-glow);
+        }
+
+        .about-text {
+            background: var(--surface);
+            border-radius: 1.5rem;
+            padding: 1.8rem;
+            border: 1px solid var(--border-dim);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Fathima Sumaiya</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-badge"><i class="fas fa-code"></i>  Passionate Developer</div>
+            <h1>Hello! I Am <span>Fathima Sumaiya</span></h1>
+            <div class="rotating-text" id="dynamicRole">
+                <i class="fas fa-laptop-code"></i>  I'm a Software Engineering Undergrad
+            </div>
+            <p class="hero-desc">
+                A creative problem solver who believes that intuitive design meets robust code. 
+                Currently seeking internship opportunities to build meaningful digital experiences. 
+                I make impactful applications that blend user needs with technical excellence.
+            </p>
+            <div class="btn-group">
+                <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i>  Hire Me</a>
+                <a href="#projects" class="btn-outline"><i class="fas fa-arrow-down"></i>  View Projects</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="avatar-circle">
+                <i class="fas fa-user-astronaut"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section (includes education and objective) -->
+    <section id="about">
+        <div class="section-title">About Me</div>
+        <div class="about-text">
+            <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">
+                I'm a passionate undergraduate pursuing <strong class="purple-highlight">BICT (Honours) at University of Vavuniya (2023 – Present)</strong>. 
+                With a self-taught drive and hands-on experience in full-stack and desktop applications, 
+                I craft digital products that create equilibrium between user needs and business goals.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem;">
+                <strong>🎯 Career Objective:</strong> Undergraduate student seeking an internship opportunity to gain practical experience, 
+                apply technical knowledge, and develop professional skills while contributing effectively to organizational goals.
+            </p>
+            <div class="tech-stack" style="margin-top: 1rem;">
+                <span class="tech"><i class="fab fa-java"></i> Java</span>
+                <span class="tech"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tech"><i class="fab fa-js"></i> JS/PHP</span>
+                <span class="tech"><i class="fab fa-windows"></i> C# .NET</span>
+                <span class="tech"><i class="fas fa-paintbrush"></i> Figma/Canva</span>
+                <span class="tech"><i class="fab fa-python"></i> Python</span>
+                <span class="tech"><i class="fas fa-code"></i> C++/C</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (all project details) -->
+    <section id="projects">
+        <div class="section-title">Projects</div>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">A collection of my recent work — from desktop applications to dynamic web systems.</p>
+        
+        <!-- Project Grid (3 main projects) -->
+        <div class="projects-grid">
+            <!-- Project 1: Virtual Internship Management System -->
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Virtual Internship Management System</h3>
+                <div class="project-tech">
+                    <span class="tech-badge">C#</span>
+                    <span class="tech-badge">Windows Forms</span>
+                    <span class="tech-badge">.NET</span>
+                </div>
+                <p class="project-desc">Desktop application developed to manage internship applications, student records, and tracking using a user-friendly interface. Streamlines the entire internship workflow for administrators and students.</p>
+                <a href="https://github.com/sumaiya-2001/intern" target="_blank" class="project-link"><i class="fab fa-github"></i> github.com/sumaiya-2001/intern <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Project 2: Sports Management System -->
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-futbol"></i></div>
+                <h3>Sports Management System</h3>
+                <div class="project-tech">
+                    <span class="tech-badge">HTML/CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">MySQL</span>
+                </div>
+                <p class="project-desc">Web-based system developed to manage sports events, teams, and player records. Features dynamic scheduling, team rosters, and performance tracking dashboards.</p>
+                <a href="https://github.com/sumaiya-2001/sports" target="_blank" class="project-link"><i class="fab fa-github"></i> github.com/sumaiya-2001/sports <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Project 3: Hostel Management System -->
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-building"></i></div>
+                <h3>Hostel Management System</h3>
+                <div class="project-tech">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">Bootstrap</span>
+                    <span class="tech-badge">JS</span>
+                </div>
+                <p class="project-desc">Web-based system to manage hostel complaints and maintenance requests efficiently. Provides real-time status tracking, user authentication, and admin panel for resolution management.</p>
+                <a href="https://github.com/sumaiya-2001/Hostel-Complaint-system" target="_blank" class="project-link"><i class="fab fa-github"></i> github.com/sumaiya-2001/Hostel-Complaint-system <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+
+        <!-- Featured Project Section (Spotlight) -->
+        <div class="featured-section">
+            <div class="featured">
+                <div class="featured-grid">
+                    <div class="featured-info">
+                        <div class="featured-badge"><i class="fas fa-star-of-life"></i>  FEATURED PROJECT</div>
+                        <h2>Virtual Internship System</h2>
+                        <p>A comprehensive desktop solution that revolutionizes how institutions manage internship lifecycles. 
+                        Built with C# and Windows Forms, this system includes modules for student applications, document verification, 
+                        real-time tracking, and automated status updates. The intuitive dashboard reduces manual workload and enhances data accuracy.</p>
+                        <div class="tech-stack">
+                            <span class="tech">C# WinForms</span>
+                            <span class="tech">File I/O</span>
+                            <span class="tech">User Controls</span>
+                            <span class="tech">Data Validation</span>
+                        </div>
+                        <a href="https://github.com/sumaiya-2001/intern" target="_blank" class="project-link" style="margin-top: 0.5rem;">VIEW CASE STUDY <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div style="flex: 0.5; text-align: center;">
+                        <i class="fas fa-chalkboard-user" style="font-size: 5rem; color: var(--purple-primary); opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second featured project detail -->
+            <div class="featured" style="margin-top: 2rem;">
+                <div class="featured-grid">
+                    <div style="flex: 0.5; text-align: center;">
+                        <i class="fas fa-database" style="font-size: 5rem; color: var(--purple-glow);"></i>
+                    </div>
+                    <div class="featured-info">
+                        <div class="featured-badge"><i class="fas fa-chart-line"></i>  FULL-STACK WEB APP</div>
+                        <h2>Sports Management System</h2>
+                        <p>A dynamic web platform for organizing tournaments, tracking player statistics, and managing team registrations. 
+                        Built with PHP & MySQL, it features role-based access (admin/coach/player), match scheduling, leaderboards, and real-time score updates. 
+                        This system is scalable and can be adapted for college sports events.</p>
+                        <div class="tech-stack">
+                            <span class="tech">PHP OOP</span>
+                            <span class="tech">MySQL Joins</span>
+                            <span class="tech">JavaScript Fetch</span>
+                            <span class="tech">CSS Grid</span>
+                        </div>
+                        <a href="https://github.com/sumaiya-2001/sports" target="_blank" class="project-link">EXPLORE REPOSITORY <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soft Skills & Technical Skills -->
+    <section>
+        <div class="section-title">Core Competencies</div>
+        <div style="background: var(--surface); border-radius: 1.5rem; padding: 1.8rem; border: 1px solid var(--border-dim);">
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+                <div>
+                    <h3 style="color: var(--purple-glow); margin-bottom: 0.8rem;"><i class="fas fa-code"></i> Technical</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="tech">Java</span><span class="tech">C#</span><span class="tech">C++</span><span class="tech">Python</span>
+                        <span class="tech">HTML/CSS</span><span class="tech">JavaScript</span><span class="tech">PHP</span>
+                        <span class="tech">MySQL</span><span class="tech">VS Code</span><span class="tech">Figma</span><span class="tech">Canva</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: var(--purple-glow); margin-bottom: 0.8rem;"><i class="fas fa-brain"></i> Soft Skills</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+                        <span class="tech">Communication</span><span class="tech">Teamwork</span>
+                        <span class="tech">Problem Solving</span><span class="tech">Time Management</span>
+                        <span class="tech">Analytical Thinking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links - LinkedIn and GitHub with real active links -->
+    <div class="social-row">
+        <a href="https://linkedin.com/in/fathimasumaiya" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn  >></a>
+        <a href="https://github.com/sumaiya-2001" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub  >></a>
+    </div>
+
+    <!-- Contact Section - Simplified: Only email display, no send message or download resume buttons -->
+    <section id="contact">
+        <div class="section-title">Let's Connect</div>
+        <div class="contact-box">
+            <i class="fas fa-envelope-open-text" style="font-size: 2.5rem; color: var(--purple-primary);"></i>
+            <p>I'm currently looking to join a cross-functional team that values improving people's lives through accessible design. <br> Or have a project in mind? Let's connect.</p>
+            <div class="contact-email">
+                <i class="fas fa-envelope"></i> siyaul04@gmail.com
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Fathima Sumaiya  <i class="fas fa-heart" style="color: #a855f7;"></i> | Open to internships</p>
+    </footer>
+</div>
+
+<!-- JavaScript for rotating text & smooth navigation -->
+<script>
+    // Rotating text roles
+    const roles = [
+        "I'm a Software Engineering undergraduate",
+        "I'm a Full-Stack Developer",
+        "I'm a UI/UX Enthusiast",
+        "I'm a Problem Solver",
+        "I build meaningful digital products"
+    ];
+    let idx = 0;
+    const dynamicElement = document.getElementById('dynamicRole');
+    if(dynamicElement) {
+        setInterval(() => {
+            idx = (idx + 1) % roles.length;
+            dynamicElement.innerHTML = `<i class="fas fa-laptop-code"></i>  ${roles[idx]}`;
+        }, 2800);
+    }
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId && targetId !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(targetId);
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    // Smooth scroll for buttons as well
+    const hireBtn = document.querySelector('.btn-primary');
+    const viewProjectsBtn = document.querySelector('.btn-outline');
+    if(hireBtn) {
+        hireBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#contact');
+            if(target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+    if(viewProjectsBtn) {
+        viewProjectsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#projects');
+            if(target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+</script>
+</body>
+</html>
